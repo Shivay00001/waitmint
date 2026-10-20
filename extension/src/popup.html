@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>WaitMint</title>
+<link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div id="settings"></div>
+
+  <section class="wm-pop-stats">
+    <h4>Your activity (stored locally)</h4>
+    <div class="wm-stat-grid">
+      <div><span id="stat-today" class="wm-stat-num">0</span><label>impressions today</label></div>
+      <div><span id="stat-total" class="wm-stat-num">0</span><label>total impressions</label></div>
+      <div><span id="stat-clicks" class="wm-stat-num">0</span><label>total clicks</label></div>
+    </div>
+  </section>
+
+  <section class="wm-pop-earnings">
+    <h4>Your earnings</h4>
+    <p id="earnings-line" class="wm-earn-line">Checking balance…</p>
+    <p class="wm-earn-note">You earn a 40% share of ad revenue (split: Platform 50% · Users 40% · Cited sources 10%). At $12 CPM that's $0.0048 per impression; manual payouts from $10 (≈2,084 impressions) in v1. House promos earn nothing.</p>
+  </section>
+
+  <section class="wm-pop-custom">
+    <h4>Custom AI sites</h4>
+    <p class="wm-small">Enable the generic detector on any other AI chat site:</p>
+    <div class="wm-custom-add">
+      <input id="custom-domain" type="text" placeholder="e.g. chat.example.com" autocomplete="off">
+      <button id="custom-add" type="button">Enable</button>
+    </div>
+    <ul id="custom-list" class="wm-custom-list"></ul>
+    <p id="custom-msg" class="wm-small"></p>
+  </section>
+
+  <footer class="wm-pop-footer">
+    <p><strong>Full privacy:</strong> WaitMint never reads, stores or sends your prompts,
+    responses, page content or browsing history. It only detects loading states.
+    Ad events send just the ad ID, the site host and an anonymous install ID.</p>
+    <p><a href="#" id="open-options">All settings &amp; privacy policy</a></p>
+  </footer>
+
+  <script src="detectors.js"></script>
+  <script src="settings.js"></script>
+  <script src="ads.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
