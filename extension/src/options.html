@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>WaitMint settings &amp; privacy</title>
+<link rel="stylesheet" href="popup.css">
+<style>
+  body { width: auto; max-width: 640px; margin: 24px auto; padding: 0 20px 40px; }
+  #settings { max-height: none; overflow: visible; }
+  section.card { background: #fff; border: 1px solid #e1ece6; border-radius: 14px; padding: 16px 20px; margin-top: 18px; }
+  section.card p, section.card li { font-size: 13.5px; line-height: 1.55; color: #2c4238; }
+</style>
+</head>
+<body>
+  <div id="settings"></div>
+
+  <section class="card">
+    <h4>Custom AI sites (generic detector)</h4>
+    <p>Enable WaitMint on any other AI chat site. The generic detector looks for
+    stop buttons, streaming indicators and busy regions — the same loading-state
+    signals used on supported sites.</p>
+    <div class="wm-custom-add">
+      <input id="custom-domain" type="text" placeholder="e.g. chat.example.com" autocomplete="off">
+      <button id="custom-add" type="button">Enable</button>
+    </div>
+    <ul id="custom-list" class="wm-custom-list"></ul>
+    <p id="custom-msg" class="wm-small"></p>
+  </section>
+
+  <section class="card">
+    <h4>How the money works</h4>
+    <p>Advertiser revenue on WaitMint is split three ways:</p>
+    <ul>
+      <li><strong>50% — platform:</strong> WaitMint / VisionQuantech, for infrastructure and operations.</li>
+      <li><strong>40% — users:</strong> shared with the people whose browsers show the cards — that's you.</li>
+      <li><strong>10% — cited sources:</strong> the websites and creators whose content the AI answers draw on.</li>
+    </ul>
+    <p>At a $12 CPM, 1,000 impressions earn $12.00 gross: $6.00 platform, $4.80 to
+    the users pool, $1.20 to the cited-sources pool. Your accrual is $0.0048 per
+    impression, credited against your anonymous install ID, so the $10 payout
+    threshold takes roughly 2,084 impressions. House promos earn nothing.
+    Payouts in v1 are manual and start at a $10 balance. The popup shows your real backend balance —
+    if you're offline it shows local impression counts instead of guessing a number.</p>
+  </section>
+
+  <section class="card">
+    <h4>Privacy — full privacy, by design</h4>
+    <p><strong>WaitMint never reads, stores or transmits your prompts, the AI's
+    responses, page content, or your browsing history.</strong> Detection uses
+    loading-state signals only (stop buttons, streaming indicators, busy regions)
+    — the extension does not inspect what you type or what the AI answers.</p>
+    <p>The only data that ever leaves your browser is an ad event:
+    <em>ad ID + site host (e.g. "chatgpt.com") + your anonymous install ID</em>.
+    No full URLs, no conversation IDs, no text. Impression and click counts are
+    also stored locally in your browser so the popup can show them offline.
+    Full policy: see PRIVACY.md shipped with the extension.</p>
+  </section>
+
+  <script src="detectors.js"></script>
+  <script src="settings.js"></script>
+  <script src="ads.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>
