@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WaitMint — Your ad, in the AI waiting room</title>
+<meta name="description" content="WaitMint shows one clean sponsored card while AI chat tools think. Works on ChatGPT, Claude, Gemini, DeepSeek and 20+ more AI platforms. Privacy-first: it never reads your prompts.">
+<style>
+  :root{
+    --mint:#0e9f6e; --mint-dark:#0b7a55; --ink:#10201a; --muted:#5b6b64;
+    --bg:#f6faf8; --card:#ffffff; --line:#dce8e2; --radius:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}
+  a{color:var(--mint-dark)}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+  header{border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:10}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+  .logo{font-weight:800;font-size:22px;letter-spacing:-.5px;color:var(--ink);text-decoration:none}
+  .logo span{color:var(--mint)}
+  .nav .links a{margin-left:22px;text-decoration:none;font-weight:600;color:var(--ink)}
+  .nav .links a:hover{color:var(--mint-dark)}
+  .hero{padding:72px 0 56px;text-align:center}
+  .badge{display:inline-block;background:#e3f5ec;color:var(--mint-dark);font-weight:700;font-size:13px;padding:5px 12px;border-radius:999px;margin-bottom:18px}
+  .hero h1{font-size:46px;line-height:1.12;letter-spacing:-1px;max-width:760px;margin:0 auto 16px}
+  .hero h1 em{font-style:normal;color:var(--mint)}
+  .hero p{font-size:19px;color:var(--muted);max-width:640px;margin:0 auto 30px}
+  .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{display:inline-block;padding:13px 26px;border-radius:10px;font-weight:700;text-decoration:none;font-size:16px}
+  .btn-primary{background:var(--mint);color:#fff}
+  .btn-primary:hover{background:var(--mint-dark)}
+  .btn-ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}
+  .btn-ghost:hover{border-color:var(--mint)}
+  section{padding:52px 0}
+  h2{font-size:30px;letter-spacing:-.5px;margin-bottom:10px}
+  .sub{color:var(--muted);max-width:680px;margin-bottom:30px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+  .card h3{font-size:18px;margin-bottom:8px}
+  .card p{color:var(--muted);font-size:15px}
+  .card .num{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:#e3f5ec;color:var(--mint-dark);font-weight:800;margin-bottom:12px}
+  .platforms{display:flex;flex-wrap:wrap;gap:9px}
+  .chip{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:14px;font-weight:600}
+  .chip.custom{border-style:dashed;color:var(--mint-dark)}
+  .privacy{background:var(--ink);color:#e8f2ed;border-radius:var(--radius);padding:34px}
+  .privacy h2{color:#fff}
+  .privacy p{color:#b9cdc4;max-width:760px}
+  .privacy strong{color:#fff}
+  .note{background:#fff8e6;border:1px solid #f0dfa8;border-radius:var(--radius);padding:20px 24px;color:#6b5b1e;font-size:15px}
+  footer{border-top:1px solid var(--line);padding:30px 0 44px;color:var(--muted);font-size:14px;background:#fff}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  @media (max-width:640px){.hero h1{font-size:34px}.hero{padding:48px 0 36px}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="/waitmint/">Wait<span>Mint</span></a>
+    <div class="links">
+      <a href="#how">How it works</a>
+      <a href="#platforms">Platforms</a>
+      <a href="#privacy">Privacy</a>
+      <a href="/waitmint/advertise.html">Advertise</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap hero">
+  <span class="badge">Founding phase — now onboarding first advertisers</span>
+  <h1>Your ad, shown while <em>AI is thinking</em>.</h1>
+  <p>WaitMint is a browser extension that shows one clean, clearly-labelled sponsored card during the few seconds an AI chat tool is generating its answer — then it disappears the moment the reply starts. No banners. No popups. No interruption.</p>
+  <div class="cta-row">
+    <!-- Install links are wired at deploy time to the Chrome Web Store / Edge / Firefox listings. -->
+    <a class="btn btn-primary" href="#install">Install WaitMint — free</a>
+    <a class="btn btn-ghost" href="/waitmint/advertise.html">Advertise with us</a>
+  </div>
+</div>
+
+<section id="how">
+  <div class="wrap">
+    <h2>How it works</h2>
+    <p class="sub">Three seconds of honest attention, instead of another ignored banner.</p>
+    <div class="grid">
+      <div class="card">
+        <span class="num">1</span>
+        <h3>You ask, AI thinks</h3>
+        <p>You send a prompt on your favourite AI chat site. While the model generates — usually a few seconds — the answer area is empty and you are simply waiting.</p>
+      </div>
+      <div class="card">
+        <span class="num">2</span>
+        <h3>One card appears</h3>
+        <p>WaitMint shows a single sponsored card, clearly tagged “Ad”, near the answer area. It never covers your composer, never moves, and has an obvious close button.</p>
+      </div>
+      <div class="card">
+        <span class="num">3</span>
+        <h3>Answer arrives, card leaves</h3>
+        <p>The instant the response starts streaming, the card fades away on its own. At most one card per prompt. That is the whole product.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="platforms" style="padding-top:0">
+  <div class="wrap">
+    <h2>Works where you already chat</h2>
+    <p class="sub">Site-specific support for 25 AI platforms — plus a generic mode you can enable on any other AI chat site.</p>
+    <div class="platforms">
+      <span class="chip">ChatGPT</span><span class="chip">Claude</span><span class="chip">Perplexity</span>
+      <span class="chip">Gemini</span><span class="chip">Copilot</span><span class="chip">DeepSeek</span>
+      <span class="chip">Grok</span><span class="chip">Mistral Le Chat</span><span class="chip">Poe</span>
+      <span class="chip">Meta AI</span><span class="chip">Duck.ai</span><span class="chip">You.com</span>
+      <span class="chip">HuggingChat</span><span class="chip">Pi</span><span class="chip">Phind</span>
+      <span class="chip">Qwen</span><span class="chip">Kimi</span><span class="chip">Doubao</span>
+      <span class="chip">Yuanbao</span><span class="chip">Ernie</span><span class="chip">Zhipu Qingyan</span>
+      <span class="chip">Hailuo</span><span class="chip">Krutrim</span><span class="chip">Hanooman</span>
+      <span class="chip">Sarvam</span>
+      <span class="chip custom">+ any AI chat site you enable</span>
+    </div>
+  </div>
+</section>
+
+<section id="privacy" style="padding-top:0">
+  <div class="wrap">
+    <div class="privacy">
+      <h2>The privacy promise</h2>
+      <p><strong>WaitMint never reads your prompts or the AI’s answers.</strong> It only detects whether the page is in a “generating” state — the same thing you can see with your own eyes. Your stats (cards shown) stay on your device. Advertisers receive only aggregate impression and click counts for their own ads: no browsing history, no identifiers, nothing personal. Every control — global on/off, per-site toggles — is one click away in the popup.</p>
+    </div>
+  </div>
+</section>
+
+<section id="install" style="padding-top:0">
+  <div class="wrap">
+    <h2>Install WaitMint</h2>
+    <p class="sub">Free. One card per wait, and only while you wait.</p>
+    <div class="cta-row" style="justify-content:flex-start">
+      <!-- href placeholders: wired to the live store listings at deploy time. -->
+      <a class="btn btn-primary" href="#install">Add to Chrome</a>
+      <a class="btn btn-ghost" href="#install">Add to Edge</a>
+      <a class="btn btn-ghost" href="#install">Add to Firefox</a>
+    </div>
+    <p style="margin-top:26px">
+      <div class="note"><strong>Founding phase, honestly:</strong> WaitMint is new. The cards you see today feature VisionQuantech’s own tools and a small set of founding advertisers while ad-network partnerships roll out. Advertisers are reviewed by a human before anything goes live.</div>
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>WaitMint — a VisionQuantech product. Built in Noida, India.</div>
+    <div><a href="/waitmint/advertise.html">Advertise</a> · <a href="https://visionquantech.com">visionquantech.com</a> · <a href="mailto:contact@visionquantech.com">contact@visionquantech.com</a></div>
+  </div>
+</footer>
+
+</body>
+</html>
