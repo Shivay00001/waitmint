@@ -1,0 +1,38 @@
+body {
+  width: 340px;
+  margin: 0;
+  padding: 12px 14px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #14231c;
+  background: #fbfdfc;
+}
+h3 { margin: 2px 0 6px; font-size: 17px; }
+h4 { margin: 14px 0 6px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em; color: #0b6e4f; }
+
+.wm-set-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 4px 0; font-size: 13px; cursor: pointer;
+}
+.wm-set-row input { accent-color: #1fae77; width: 16px; height: 16px; }
+.wm-set-master { font-weight: 700; border-bottom: 1px solid #e1ece6; padding-bottom: 8px; }
+
+#settings { max-height: 300px; overflow-y: auto; padding-right: 4px; }
+
+.wm-stat-grid { display: flex; gap: 10px; }
+.wm-stat-grid > div { flex: 1; background: #eef6f2; border-radius: 10px; padding: 8px; text-align: center; }
+.wm-stat-num { display: block; font-size: 18px; font-weight: 700; color: #0b6e4f; }
+.wm-stat-grid label { font-size: 10px; color: #5c6f66; }
+
+.wm-earn-line { font-size: 14px; font-weight: 600; margin: 2px 0; }
+.wm-earn-note, .wm-small { font-size: 11px; color: #5c6f66; line-height: 1.4; }
+
+.wm-custom-add { display: flex; gap: 6px; }
+.wm-custom-add input { flex: 1; padding: 6px 8px; border: 1px solid #cfe0d7; border-radius: 8px; font-size: 12.5px; }
+.wm-custom-add button { background: #1fae77; color: #fff; border: 0; border-radius: 8px; padding: 6px 12px; font-weight: 600; cursor: pointer; }
+.wm-custom-list { list-style: none; margin: 6px 0; padding: 0; font-size: 12.5px; }
+.wm-custom-list li { display: flex; justify-content: space-between; padding: 3px 0; }
+.wm-custom-list button { background: none; border: 0; color: #b3261e; cursor: pointer; font-size: 12px; }
+
+.wm-pop-footer { border-top: 1px solid #e1ece6; margin-top: 10px; padding-top: 8px; }
+.wm-pop-footer p { font-size: 11px; color: #41544a; line-height: 1.45; margin: 4px 0; }
+.wm-pop-footer a { color: #0b6e4f; }
